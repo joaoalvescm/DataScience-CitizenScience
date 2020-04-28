@@ -1,0 +1,19 @@
+Improving big citizen science data: Moving beyond haphazar sampling
+
+resumo: atribuir relevância a diferentes tipos de observações e prever relevância de futuras observações
+
+framework para otimizar marginal values
+referência ao iNaturalist
+
+falhas temporais e espaciais, assim como redundâncias
+Bias:
+  - habilidade dos observadores
+  - tendência taxonómica
+
+Para resolver a diferença de habilidade de observadores:
+  - modelos de distribuição de espécies
+  - estratégias e protocolos de recolha de observações
+
+ML e clustering, ver refs 31-33
+
+subsampling analysis

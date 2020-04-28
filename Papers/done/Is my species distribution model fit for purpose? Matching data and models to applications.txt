@@ -1,0 +1,36 @@
+Tema: Modelos de distribuição de espécies (SDM)
+
+Resumo: ajudar a perceber se o SDM é o melhor para o caso em que o utilizamos
+
+SDM's tipicamente relacionam a presença de espécies com o ambiente para estimar preferências de habitat ou prever distribuições
+
+SDM's necessitam de informações relativas ao ambeinte.
+
+A maior parte dos SDM's necessitam que se conheça a probabilidade de existir uma espécie num determinado sítio, ou que se saiba a área total de ocupação
+
+Presence-Background (PB):(mais usada - 53% dos papers) only presence records and environmental information
+  - Maxent Method
+  - Regression methods
+  - Spatial point-process models (PPM)
+Estimam preferências de habitat ao comparar características ambientais onde as espécies foram observadas (P), com as regiões modeladas (B)
+
+Presence-Absence (PA): (47% dos papers)
+  - Logistic Regression
+  - Machine Learning
+Fornecem informação sobre se uma espécie foi detetada, ou não, num conjunto de locais de recolha.
+Estimam a probabilidade de observar uma espécie num local, ao comparar as características ambientas de locais onde a espécie foi observada, com locais onde não foi
+
+Occupancy-Detection (DET): (5% dos papers)
+Observações obtidas de maneira que possam ser explicitamente modeladas por um SDM
+Fornecem informação sobre a probabilidade de observar uma espécie que esteja presente num local e como essa probabilidade varia de local para local, ou visita para visita.
+
+Presence-Only (PO): (11% dos papers)
+Não contêem informações relativas ao ambiente (Background)
+
+PB<PA<DET em termos de informação
+
+Informações sobre o local são improtantes (ex:fertilidade do solo, elevação, ...)
+
+SDM's para PB's pode haver um resultado enviesado para as relações com o ambiente.. Não se consegue resolver completamente o problema, dado que dependem do método de sampling.
+
+É necessário que não haja sampling bias para estimar a relative likelihood da presença de uma espécie
