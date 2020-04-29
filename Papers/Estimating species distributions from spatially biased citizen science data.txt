@@ -1,4 +1,0 @@
-Resumo:
-
-Utilizam dados provenientes do BirdTrack 2007-2011 no Reino Unido para modelar o spatial bias
-Comparam com dados de um dataset sem bias (Atlas Survey)

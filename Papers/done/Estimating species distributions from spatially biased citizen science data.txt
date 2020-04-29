@@ -1,0 +1,42 @@
+Options:
+1 - spatial filtering: seleccionar um subset que tem uma even distribution (+ evenness of data, -sample size)
+bom para eliminar spatial bias de larga escala, mas não resolve smaller-scale bias (certas pessoas escolhem sempre certos locais)
+
+2 - estimar probabilidade de seleção do local baseado em variáveis ambientais e usar as probabilidades para equilibrar a distribuição das variáveis. (ML - Covariate Shift)
+
+3 - jointly model the site selection process and ecological response
+
+caracterizar o spatial bias e quantificar o seu impacto na distribuição das espécies tendo em conta estes bias
+
+Modelaram o spatial bias usando ML e utlizaram as previsões como pesos nos SDM's
+
+Validaram os resultados com datasets com high quality information e o mínimo de spatial bias
+
+Método:
+1 - Data selection
+2 - Site classification according to popularity (km²)
+3 - Modelaram a probabildade de observação nesses locais tendo em conta as variáveis ambientais
+4 - Utilizam SDM's para quantificar as distribuições (resultados do 3 -> pesos para os modelos)
+5 - Compararam os resultados efetuando as mesmas operações num dataset sem bias
+
+1) Data Selection:
+  - BirdTrack 2007 a 2011
+  - Dados que foram observados e identificados
+
+2) Site classification:
+  - Utilizaram um algoritmo de clustering (artigo: "Hopkins, 1954")
+  - Utilizaram k-means clustering para separar os locais em 2 clusters baseados em 7 variáveis que descrevem a popularidade de um local (número de observações, número de observadores, média de observações por observador, mediana da distância da residência dos observadores, mediana do número de espécies observadas, raridade média das espécies, predisposição para existirem espécies raras nesses locais)
+
+Utilizaram a linguagem R, package factoextra
+
+3) Models of Site selection
+  Utilizaram variáveis ambientais
+  Generalized Boosted Regression Tree
+  Separaram as localizações em quadrados de 100x100km e seleccionaram grupos de 4 quadrados onde 3 eram para treinar e um para testar
+  Area Under Curve and True Skill Statistic
+
+4) Species Distribution Models (SDM)
+  utilizaram visitas "repetidas" feitas por um utilizador a um local
+  Utilizaram variáveis ambientais
+
+Assumiram que os resultados dos SMD's com o BirdAtlas são os resultados mais próximos dos reais de modo a compararm com o BirdTrack
