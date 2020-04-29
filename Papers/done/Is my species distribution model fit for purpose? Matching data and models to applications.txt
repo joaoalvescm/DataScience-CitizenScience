@@ -25,7 +25,7 @@ Observações obtidas de maneira que possam ser explicitamente modeladas por um 
 Fornecem informação sobre a probabilidade de observar uma espécie que esteja presente num local e como essa probabilidade varia de local para local, ou visita para visita.
 
 Presence-Only (PO): (11% dos papers)
-Não contêem informações relativas ao ambiente (Background)
+Não contêm informações relativas ao ambiente (Background)
 
 PB<PA<DET em termos de informação
 
